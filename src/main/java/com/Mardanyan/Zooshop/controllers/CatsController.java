@@ -1,0 +1,15 @@
+package com.Mardanyan.Zooshop.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class CatsController {
+    @GetMapping("/cats")
+    public String cat(Model model)
+    {
+        return "cats";
+    }
+
+}
