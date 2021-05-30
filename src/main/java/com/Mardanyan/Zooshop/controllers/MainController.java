@@ -22,10 +22,20 @@ public class MainController {
     @Autowired
     ProductTypeRepository productTypeRepository;
 
+
+
+    // Главная страница
     @GetMapping("/")
     public String home(Model model) {
         model.addAttribute("title", "Главная страница");
         return "home";
+    }
+
+    //Страница логина
+    @GetMapping("/login")
+    public String login(Model model){
+        model.addAttribute("name","Авторизация");
+        return "login";
     }
 
 
