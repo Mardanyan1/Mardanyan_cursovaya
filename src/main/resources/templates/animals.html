@@ -104,12 +104,12 @@
                         <h4 class="my-0 fw-normal" th:text="${animal.name}"></h4>
                     </div>
                     <div class="card-body">
-                        <img src="https://c.wallhere.com/photos/06/8e/dogs_bulldog_brindle_black_white_grass_lie_couple-794086.jpg!d">
+                        <img th:src="@{'/image/' + ${animal.image} }">
                         <ul class="list-unstyled mt-3 mb-4">
-                            <li><b>Страна происхождения:</b><span th:text="${animal.country}"></span></li>
-                            <li><b>Вес:</b><span th:text="${animal.weight}"></span></li>
-                            <li><b>Рост:</b><span th:text="${animal.height}"></span></li>
-                            <li><b>Продолжительность жизни:</b><span th:text="${animal.liveLong}"></span></li>
+                            <li><b>Страна происхождения: </b><span th:text="${animal.country}"></span></li>
+                            <li><b>Вес: </b><span th:text="${animal.weight}"></span></li>
+                            <li><b>Рост: </b><span th:text="${animal.height}"></span></li>
+                            <li><b>Продолжительность жизни: </b><span th:text="${animal.liveLong}"></span></li>
                         </ul>
                         <a href="#" class="button7">кнопка</a>
                     </div>
