@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <style>
+
+    img {
+    max-width: 100%;
+    }
+    #navigation {
+    position: sticky;
+    top: 0;
+    background: #e8e8e8;
+    margin: 10px auto 10px;
+    border-radius: 20px;
+    width: 90%;
+    height: 25%;
+    box-shadow: 5px 5px 3px 1px;
+    z-index: 1000;
+    }
+    </style>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+  </head>
+  <body>
+  <div th:fragment="header">
+    <div class="container">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <nav id ="navigation" align="center" style="font-size: 130%">
+          <!--<a style="text-decoration:none" href="/food">Корм</a>|
+          |--><a style="text-decoration:none" href="/">Питомцы</a>|
+          |<a style="text-decoration:none" href="mraspisanie.html">О нас</a>|
+          |<a style="text-decoration:none" href="army.html">Для администрации</a>|
+          |<a style="text-decoration:none" href="/login">Login</a>
+        </nav>
+      </header>
+    </div>
+  </div>
+    <main>
+      <div class="container">
+        <img src="qqqqqqqqqqqqqqqqq.jpg">
+        В нашем интернет-магазине товары для животных производства более чем 300 ведущих мировых марок собраны в одном месте, включая эксклюзивные европейские бренды (к примеру, у нас вы сможете приобрести лежаки Scruffs или препарат Ветмедин для собак с сердечной недостаточностью). Мы предлагаем нашим клиентам возможность не только приобрести сертифицированную продукцию, но и максимально комфортные условия для покупки:
+
+        качественный сервис с оперативной обработкой заявок;
+        быстрая курьерская доставка домой, на дачу, в офис в удобное для покупателя время;
+        несколько способов оплаты товаров (наличные, оплата на сайте или банковской картой);
+        профессиональная консультация, помощь в выборе зоотоваров в интернет-магазине.
+        Для того чтобы сделать заказ или получить помощь при выборе, проконсультироваться с экспертом call-центра нашего интернет-магазина, позвоните нам, будем рады помочь!
+        В нашем интернет-магазине товары для животных производства более чем 300 ведущих мировых марок собраны в одном месте, включая эксклюзивные европейские бренды (к примеру, у нас вы сможете приобрести лежаки Scruffs или препарат Ветмедин для собак с сердечной недостаточностью). Мы предлагаем нашим клиентам возможность не только приобрести сертифицированную продукцию, но и максимально комфортные условия для покупки:
+
+        качественный сервис с оперативной обработкой заявок;
+        быстрая курьерская доставка домой, на дачу, в офис в удобное для покупателя время;
+        несколько способов оплаты товаров (наличные, оплата на сайте или банковской картой);
+        профессиональная консультация, помощь в выборе зоотоваров в интернет-магазине.
+        Для того чтобы сделать заказ или получить помощь при выборе, проконсультироваться с экспертом call-центра нашего интернет-магазина, позвоните нам, будем рады помочь!
+      </div>
+    </main>
+    <div th:fragment = "footer">
+      <footer class="pt-4 my-md-5 pt-md-5 border-top">
+        <div class="row">
+          <div class="col-12 col-md">
+            <small class="d-block mb-3 text-muted">© 2021</small>
+            <small>Mardanyan A.S.</small>
+          </div>
+        </div>
+      </footer>
+    </div>  </body>
+</html>
