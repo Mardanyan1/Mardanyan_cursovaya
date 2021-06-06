@@ -23,11 +23,12 @@ public class RegistrationController
     }
 
     @PostMapping("/registration")
-    public String addUser(User user, Model model) {
+    public String addUser(User user, Model model)
+    {
         User userFromDb = userRepo.findByUsername(user.getUsername());
 
         if (userFromDb != null) {
-            model.addAttribute("message", "Ошибка! Пользователь с данным именем уже существует!");
+            model.addAttribute("message", "Такой пользователь существует!");
             return "registration";
         }
 

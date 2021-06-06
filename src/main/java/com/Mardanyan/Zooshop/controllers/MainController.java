@@ -14,7 +14,8 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-public class MainController {
+public class MainController
+{
 
     @Autowired
     ProductRepository productRepository;
@@ -22,32 +23,33 @@ public class MainController {
     @Autowired
     ProductTypeRepository productTypeRepository;
 
-
-
     // Главная страница
     @GetMapping("/")
-    public String home(Model model) {
+    public String home(Model model)
+    {
         model.addAttribute("title", "Главная страница");
         return "home";
     }
 
     //Страница логина
     @GetMapping("/login")
-    public String login(Model model){
+    public String login(Model model)
+    {
         model.addAttribute("name","Авторизация");
         return "login";
     }
 
     @GetMapping("/us")
-    public String us(Model model){
+    public String us(Model model)
+    {
         model.addAttribute("name","О нас");
         return "us";
     }
 
     //Страница с каталогами
     @GetMapping("/animals")
-    public String animals(Model model){
-
+    public String animals(Model model)
+    {
         /**
          * Map в котором для каждого типа продукта хранится свой список продуктов
          */
