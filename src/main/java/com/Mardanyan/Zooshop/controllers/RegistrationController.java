@@ -26,16 +26,14 @@ public class RegistrationController
     public String addUser(User user, Model model)
     {
         User userFromDb = userRepo.findByUsername(user.getUsername());
-
-        if (userFromDb != null) {
-            model.addAttribute("message", "Такой пользователь существует!");
+        if (userFromDb != null)
+        {
+            model.addAttribute("message", "Такой пользователь уже есть!");
             return "registration";
         }
-
         user.setActive(true);
         user.setRoles(Collections.singleton(Role.USER));
         userRepo.save(user);
-
         return "redirect:/login";
     }
 }

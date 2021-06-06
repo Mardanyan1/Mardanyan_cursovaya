@@ -24,7 +24,7 @@ public class UserController
     public String userList(Model model)
     {
         model.addAttribute("users", userReposit.findAll());
-        return "userL";
+        return "userList";
     }
 
     @GetMapping("{user}")
@@ -46,16 +46,12 @@ public class UserController
         Set<String> roles = Arrays.stream(Role.values())
                 .map(Role::name)
                 .collect(Collectors.toSet());
-
         user.getRoles().clear();
-
         for (String key : form.keySet())
         {
             if (roles.contains(key)) {user.getRoles().add(Role.valueOf(key));}
         }
-
         userReposit.save(user);
-
         return "redirect:/admin/user";
     }
 
@@ -66,6 +62,4 @@ public class UserController
         model.addAttribute("user", userReposit.findAll());
         return "redirect:/admin/user";
     }
-
-
 }

@@ -6,19 +6,14 @@ import javax.persistence.*;
 
 @Entity(name = "product")
 @Data
-public class Product {
-
+public class Product
+{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
-
     private String name;
-
     private Double price;
-
     private String image;
-
-
 
     @Column(length = 65553)
     @Type(type = "text")
@@ -36,15 +31,14 @@ public class Product {
     @Type(type = "text")
     private String liveLong;
 
-
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "product_type_id")
     private ProductType productType;
 
-    public Product() {
-    }
+    public Product() {}
 
-    public Product(String name, Double price, String image) {
+    public Product(String name, Double price, String image)
+    {
         this.name = name;
         this.price = price;
         this.image = image;

@@ -2,12 +2,10 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <style>
-
         img
         {
             max-width: 100%;
         }
-
         #navigation
         {
             position: sticky;
@@ -20,7 +18,6 @@
             box-shadow: 5px 5px 3px 1px;
             z-index: 1000;
         }
-
         a.button7
         {
             font-weight: 700;
@@ -35,13 +32,11 @@
             transition: 0.2s;
         }
     </style>
-    <!--<title th:text="${title}"></title>-->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
 </head>
 <body>
 <header th:insert="blocks/header::header"></header>
-
 <main>
     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
         <div class="col">
@@ -96,6 +91,5 @@
     </div>
 </main>
 <div th:insert="blocks/footer::footer"></div>
-
 </body>
 </html>

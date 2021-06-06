@@ -2,11 +2,10 @@
 <html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
     <head>
         <style>
-
-            img {
+            img
+            {
                 max-width: 100%;
             }
-
             #navigation {
                 position: sticky;
                 top: 0;
@@ -68,8 +67,6 @@
                 -o-transition: .1s ease;
                 transition: .1s ease;
             }
-
-
             a.button7 {
                 font-weight: 700;
                 height: 100%;
@@ -88,7 +85,6 @@
     </head>
     <body>
         <header th:insert="blocks/header::header"></header>
-
         <main>
             <div class="container">
                 <div class="products" th:each="el: ${map}">

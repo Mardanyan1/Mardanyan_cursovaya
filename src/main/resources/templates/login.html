@@ -4,26 +4,26 @@
 <head>
     <title th:text="${name}"></title>
 </head>
-    <body style="background-color: #3e3e3e;color:white">
-        <div th:if="${param.error}" style="text-align: center; font-size: 25px; color: red">
-            Некорректные имя пользователя или пароль! Повторите попытку.
+    <body style="background-color: #646971;color:white">
+        <div th:if="${param.error}" style="text-align: center; font-size: 25px; color: #ffffff">
+            Ошибка в воде
         </div>
         <div th:if="${param.logout}" style="text-align: center; font-size: 25px">
             Вы вышли из системы!
         </div>
         <div class="container">
-            <form th:action = "login" class="form-horizontal" method="post">
-                <div class="form-group">
+            <form th:action = "login"  method="post">
+                <div>
                     <label for="username" class="col-xs-2 control-label">Username</label>
                     <div>
                         <input placeholder="Имя пользователя" type="text" id="username" name="username">
                     </div>
                 </div>
 
-                <div class="form-group">
+                <div>
                     <label for="password" class="col-xs-2 control-label">Password: </label>
                     <div class="col-xs-10">
-                        <input placeholder="Пароль" type="password" id="password" name="password" class="form-control">
+                        <input placeholder="Пароль" type="password" id="password" name="password">
                     </div>
                 </div>
                 <br>
