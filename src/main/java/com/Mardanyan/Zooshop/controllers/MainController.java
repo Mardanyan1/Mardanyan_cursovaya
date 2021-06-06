@@ -38,6 +38,11 @@ public class MainController {
         return "login";
     }
 
+    @GetMapping("/us")
+    public String us(Model model){
+        model.addAttribute("name","О нас");
+        return "us";
+    }
 
     //Страница с каталогами
     @GetMapping("/animals")
