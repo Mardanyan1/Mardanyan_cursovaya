@@ -2,6 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
       xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
+  <style>
+    #navigation {
+      position: sticky;
+      top: 0;
+      background: #e8e8e8;
+      margin: 10px auto 10px;
+      border-radius: 20px;
+      width: 90%;
+      height: 25%;
+      box-shadow: 5px 5px 3px 1px;
+      z-index: 1000;
+    }
+  </style>
   <title>Список всех пользователей и их доступ</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -16,31 +29,9 @@
           crossorigin="anonymous"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-  <div class="container">
-    <a th:href="@{/}">Главная страница</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-            aria-controls="navbarResponsive"
-            aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item ">
-          <a class="nav-link" th:href="@{/admin/productTypeList}">Типы продуктов
-            <span class="sr-only">(current)</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" th:href="@{/admin/productList}">Продукты</a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" th:href="@{/admin/user}">Пользователи</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+
+<header th:insert = "blocks/header::header"></header>
+
 <table class="table">
   <thead class="thead-dark">
   <tr>
