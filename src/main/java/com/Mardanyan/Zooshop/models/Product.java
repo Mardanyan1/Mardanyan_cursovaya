@@ -2,6 +2,7 @@ package com.Mardanyan.Zooshop.models;
 
 import lombok.Data;
 import org.hibernate.annotations.Type;
+
 import javax.persistence.*;
 
 @Entity(name = "product")

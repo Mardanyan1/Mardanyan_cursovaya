@@ -24,24 +24,15 @@ public class MainController
 
     @GetMapping("/")
     public String home(Model model)
-    {
-        model.addAttribute("title", "Главная страница");
-        return "home";
-    }
+    {model.addAttribute("title", "Главная страница");return "home";}
 
     @GetMapping("/login")
     public String login(Model model)
-    {
-        model.addAttribute("name","Авторизация");
-        return "login";
-    }
+    {model.addAttribute("name","Авторизация");return "login";}
 
     @GetMapping("/us")
     public String us(Model model)
-    {
-        model.addAttribute("name","О нас");
-        return "us";
-    }
+    {model.addAttribute("name","О нас");return "us";}
 
     @GetMapping("/animals")
     public String animals(Model model)

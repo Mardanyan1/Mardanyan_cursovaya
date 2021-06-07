@@ -44,8 +44,8 @@
       <td th:text="${state.index + 1}"></td>
       <td th:text="${user.username}"></td>
       <td th:text="${user.getRoles()}"></td>
-      <td><a th:href="@{'/admin/user/'+ ${user.id}}">Редактировать</a></td>
-      <td><a th:href="@{'/admin/user/delete/' + ${user.id}}">Удалить</a></td>
+      <td><a th:href="@{'/admin/user/'+ ${user.id}}" class="btn btn-lg btn-primary btn-black">Редактировать</a></td>
+      <td><a th:href="@{'/admin/user/delete/' + ${user.id}}" class="btn btn-info">Удалить</a></td>
     </tr>
   </div>
   </tbody>
